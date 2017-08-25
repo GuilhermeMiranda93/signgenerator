@@ -10,11 +10,10 @@
 //= require jquery.inputmask.numeric.extensions
 //= require jquery.inputmask.date.extensions
 
+//= require clipboard
+
 $(document).ready(function(){
 
-	$('#copyButton').click(function() {
-		document.execCommand('SelectAll');
-		document.execCommand("copy");
-	});
+	var clipboard = new Clipboard('#copyButton');
 });
 

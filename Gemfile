@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-inputmask-rails'
 gem 'carrierwave', '~> 1.0'
+gem 'clipboard-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
