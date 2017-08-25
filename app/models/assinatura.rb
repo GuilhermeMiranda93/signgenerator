@@ -1,0 +1,2 @@
+class Assinatura < ApplicationRecord
+end

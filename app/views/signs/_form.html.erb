@@ -1,0 +1,117 @@
+<div class="container">
+
+	<div class="row justify-content-center align-items-center">
+
+		<div class="col-12 col-md-8 col-xl-8 form-custom p-5">
+
+			<%=form_for @signs do |f| %>
+
+			<% if @signs.errors.any? %>
+			<div id="error_explanation">
+				<h2>
+					<%= pluralize(@signs.errors.count, "erro") %> impediu que essa assinatura fosse salva.
+				</h2>
+				<ul>
+					<% @signs.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+			<% end %>
+
+			<div class="row mb-4">
+				<div class="w-40">
+					<%= image_tag(@signs.imagem, class: "image-form") %>
+				</div>
+			</div>
+
+			<div class="row mb-4">
+
+				<div class="col-12">
+					<label for="imagem">Avatar <a href="https://drive.google.com/open?id=0B_1MsVcw9MpSQjREYVJYczRHVUE" target="_blank"><small>(Pegue a sua foto)</small></a></label>
+					<div class="input-group">
+						<%= f.file_field(:imagem, accept: 'image/png,image/gif,image/jpeg') %>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row mb-4">	
+				<div class="col-12">
+					<label for="nome">Nome Completo</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3"><%=icon('user')%></span>
+						<%=f.text_field :nome, :class => 'form-control', :id => 'nome' %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-4">
+				<div class="col-12">
+					<label for="cargo">Cargo</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3"><%=icon('briefcase')%></span>
+						<%=f.text_field :cargo, :class => 'form-control', :id => 'cargo' %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-4">
+				<div class="col-12 col-md-4">
+					<label for="telefone">Telefone 0800</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3"><%=icon('phone')%></span>
+						<%= f.select(:telefone, ['0800 707 5900', '0800 704 1133'], {}, { :class => 'form-control', :id => 'telefone' }) %>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-4">
+					<label for="ramal">Ramal</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3"><%=icon('phone-square')%></span>
+						<%=f.text_field :ramal, :class => 'form-control', :id => 'ramal' %>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-4">
+					<label for="celular">Celular</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3"><%=icon('mobile')%></span>
+						<%=f.text_field :celular, :class => 'form-control', :id => 'celular' %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-4">
+				<div class="col-12 col-md-6">
+					<label for="skype">Skype</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3"><%=icon('skype')%></span>
+						<%=f.text_field :skype, :class => 'form-control', :id => 'skype' %>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6">
+					<label for="empresa">Empresa</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3"><%=icon('building')%></span>
+						<%= f.select(:empresa, ['Grupo SOITIC', 'AMPLIART', 'CONGESTIC', 'ECOS', 'EFI', 'ELFUTEC', 'MEDSYSTEM', 'PACS', 'USAS'], {}, { :class => 'form-control', :id => 'empresa' }) %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-4">
+				<div class="col-12">
+					<%= f.submit :Salvar, :class => 'btn btn-success'%>
+					<button class="btn btn-danger" type="reset">Limpar</button>
+					<%= link_to 'Voltar', signs_path, :class => 'btn btn-warning' %>					
+				</div>
+			</div>
+
+			<%end%>
+
+		</div>
+
+	</div>
+
+</div>

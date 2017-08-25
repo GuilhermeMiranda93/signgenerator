@@ -1,0 +1,40 @@
+// Place all the styles related to the Signs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-control{
+	font-size: 14px;
+}
+
+.form-custom{
+	background-color: white;
+	box-shadow: 0 7px 15px 0 rgba(0,0,0,.2);
+}
+
+h4{
+	font-weight: bold;
+}
+
+.image-form{
+	max-width: 200px;
+	width: 100%;
+}
+
+#copyButton{
+	cursor: pointer;
+}
+
+.title-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	h1{
+		color: white;
+		font-weight: bold;
+	}
+	h2{
+		color: white;
+		font-weight: lighter;
+		font-size: 16px;
+	}
+}

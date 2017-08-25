@@ -1,0 +1,19 @@
+<h1>Nova Assinatura</h1>
+
+<%= form_for :assinatura, url: assinatura_path do |f| %>
+
+<p>
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+</p>
+
+<p>
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone %>
+</p>
+
+<p>
+    <%= f.submit %> 
+</p>
+
+<% end %>

@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="title-box p-4 row mb-4 btn-primary">
+    <h1>Código</h1>
+    <h2>Copie o código e cole em seu gerenciador de email.</h2>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-12 form-custom p-4" id="codetocopy">
+
+      <%= case @signs.empresa
+      when 'AMPLIART' 
+        puts @empresa = 'img/ampliart.png'
+        puts @cta = 'img/cta-amp.png'
+      when 'CONGESTIC' 
+        puts @empresa = 'img/congestic.png'
+        puts @cta = 'img/cta-congestic.png'
+      when 'ECOS' 
+        puts @empresa = 'img/ecos.png'
+        puts @cta = 'img/cta-ecos.png'
+      when 'EFI' 
+        puts @empresa = 'img/efi.png'
+        puts @cta = 'img/cta-efi.png'
+      when 'ELFUTEC' 
+        puts @empresa = 'img/elfutec.png'
+        puts @cta = 'img/cta-elf.png'
+      when 'MEDSYSTEM' 
+        puts @empresa = 'img/medsystem.png'
+        puts @cta = 'img/cta-med.png'
+      when 'PACS' 
+        puts @empresa = 'img/soitic.png'
+        puts @cta = 'img/cta-soi.png'
+      when 'USAS' 
+        puts @empresa = 'img/usas.png'
+        puts @cta = 'img/cta-usas.png'
+      else
+        puts @empresa = 'img/soitic.png'
+        puts @cta = 'img/cta-soi.png'
+      end
+      %>
+
+      <%= h '<div>
+      <div>
+        <h2 style="font-family:Arial; font-size:12pt; color: rgb(7,86,122)">OBRIGADO POR ESTAR COM O GRUPO SOITIC</h2>
+        <br><br><br><br><br><br><br>
+        <p style="font-family:Arial; font-size:12pt; font-weight:bold; color: rgb(7,86,122)">Foi um prazer estar com voc&ecirc!</p>
+      </div>
+      <br><br>
+      <div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center">
+
+        <div style="padding: 1em; padding-right: .5em">
+          <div style="border-radius:50%; width:100px; height: 100px; background-image:url(http://soitic.com/images/assinaturas'+@signs.imagem.to_s+'); background-size: cover"></div>
+        </div>
+
+        <div style="padding: 1em; padding-left: .5em">
+          <p style="font-family: Lucida Sans, sans-serif; color: rgb(7,86,122); font-size: 12px; margin: 5px;"><b>'+@signs.nome+'</b> | '+@signs.cargo+'</p>
+
+          <p style="font-family: Lucida Sans, sans-serif; color: #51A7D9; font-weight: lighter; font-size: 12px; margin: 5px;">'+@signs.telefone+' | Ramal: '+@signs.ramal+' | '+@signs.celular+'</p>
+
+          <p style="font-family: Lucida Sans, sans-serif; color: rgb(129,129,129); font-weight: lighter; font-size: 12px; margin: 5px;">Skype: '+@signs.skype+'</p>
+
+          <a href="http://www.soitic.com" target="_blank" style="font-family: Lucida Sans, sans-serif; color: #51A7D9; font-weight: lighter; font-size: 12px; margin: 5px; text-decoration: none">www.soitic.com</a>
+        </div>
+
+      </div>
+
+      <div style="padding-left: 1em; display: flex; flex-direction: row; justify-content: flex-start; align-items: center">
+
+        <a href="http://www.catsoitic.com.br/catexpo/" target="_blank" style="text-decoration: none">
+          <div style="border: 3px solid rgb(232, 189, 53); padding: 10px; width: fit-content">
+            <p style="font-family: Lucida Sans, sans-serif; color: rgb(232, 189, 53); font-weight: bold; font-size: 11pt; margin: 0px;">Conheça nosso catálogo ></p>
+          </div>
+        </a>
+
+
+        <div style="max-height: 50px; padding: 1em; display: flex; justify-content: center; align-items: center;">
+          <img style="height: 50px; margin-right: 1em;" src="'+@empresa+'" alt="soitic">
+        </div>
+      </div>
+
+
+      <div style="font-family: sans-serif; color: gray; padding: 1em">
+        <p style="text-align: left; font-size: 11px">Enviado por Grupo Soitic<span style="display: inline-block; width: 100%;"></span>
+          Rua Paraná, 497 | Bairro dos Funcionários<span style="display: inline-block; width: 100%;"></span>
+          Poços de Caldas | MG<span style="display: inline-block; width: 100%;"></span>
+          0800 707 5900 | +55 35 3729-9900<span style="display: inline-block; width: 100%;"></span>
+          <a href="http://www.vip-medsystem.com.br/login.aspx" target="_blank">vip.soitic.com</a></p>
+        </div>
+
+        <div>
+        <img style="margin-right: 1em;" src="'+@cta+'" alt="cta">
+        </div>' %>
+
+
+
+      </div>
+
+      <button class="btn btn-secondary mr-4" id="copyButton">Copiar código</button>
+      <%= link_to 'Voltar', signs_path, :class => 'btn btn-warning' %>
+
+    </div>
+
+
+  </div>

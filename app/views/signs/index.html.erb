@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="title-box p-4 row mb-4 btn-primary">
+		<h1>Home</h1>
+		<h2>Selecione alguma das assinaturas já criadas ou crie uma nova.</h2>
+	</div>
+</div>
+
+
+
+<div class="container">
+
+	<div class="row mb-4">
+		<%= link_to icon('plus')+' Nova Assinatura', new_sign_path, class: "btn btn-primary" %>	
+	</div>
+
+	<div class="row">
+
+		<% @signs.each do |sign| %>
+		<div class="card col-12 col-md-3 mb-4 p-0">
+			<%= image_tag(sign.imagem, class: "card-img-top") %>
+			<div class="card-block p-2">
+				<h4 class="card-title mb-0"><%= sign.nome %></h4>
+
+				<p class="card-text"><%= sign.cargo %></p>
+
+				<%= link_to icon('code'), sign_path(sign), class: "btn btn-primary" %>
+
+				<%= link_to icon('pencil'), edit_sign_path(sign), class: "btn btn-primary" %>
+
+				<%= link_to icon('trash'), sign_path(sign),
+				class: 'btn btn-primary',
+					method: :delete,
+					data: { confirm: 'Você tem certeza?' } %>
+
+				</div>
+			</div>
+
+			<% end %>
+
+
+		</div>
+
+
+	</div>
