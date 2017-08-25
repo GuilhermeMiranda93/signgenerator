@@ -13,32 +13,32 @@
 
       <%= case @signs.empresa
       when 'AMPLIART' 
-        puts @empresa = 'img/ampliart.png'
-        puts @cta = 'img/cta-amp.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/ampliart.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-ampliart.png'
       when 'CONGESTIC' 
-        puts @empresa = 'img/congestic.png'
-        puts @cta = 'img/cta-congestic.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/congestic.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-congestic.png'
       when 'ECOS' 
-        puts @empresa = 'img/ecos.png'
-        puts @cta = 'img/cta-ecos.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/ecos.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-ecos.png'
       when 'EFI' 
-        puts @empresa = 'img/efi.png'
-        puts @cta = 'img/cta-efi.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/efi.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-efi.png'
       when 'ELFUTEC' 
-        puts @empresa = 'img/elfutec.png'
-        puts @cta = 'img/cta-elf.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/elfutec.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-empresas/elfutec.png'
       when 'MEDSYSTEM' 
-        puts @empresa = 'img/medsystem.png'
-        puts @cta = 'img/cta-med.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/medsystem.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-medsystem.png'
       when 'PACS' 
-        puts @empresa = 'img/soitic.png'
-        puts @cta = 'img/cta-soi.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/soitic.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-soitic.png'
       when 'USAS' 
-        puts @empresa = 'img/usas.png'
-        puts @cta = 'img/cta-usas.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/usa.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-usa.png'
       else
-        puts @empresa = 'img/soitic.png'
-        puts @cta = 'img/cta-soi.png'
+        puts @empresa = 'http://soitic.com/images/assinaturas/empresas/soitic.png'
+        puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-soitic.png'
       end
       %>
 
@@ -52,7 +52,7 @@
       <div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center">
 
         <div style="padding: 1em; padding-right: .5em">
-          <div style="border-radius:50%; width:100px; height: 100px; background-image:url(http://soitic.com/images/assinaturas'+@signs.imagem.to_s+'); background-size: cover"></div>
+          <div style="border-radius:50%; width:100px; height: 100px; background-image:url(https://cryptic-plateau-40412.herokuapp.com/signs'+@signs.imagem.to_s+'); background-size: cover"></div>
         </div>
 
         <div style="padding: 1em; padding-left: .5em">
