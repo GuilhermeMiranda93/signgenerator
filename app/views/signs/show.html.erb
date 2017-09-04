@@ -15,30 +15,39 @@
       when 'AMPLIART' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/ampliart.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-ampliart.png'
+        puts @link = 'ampliart.com'
       when 'CONGESTIC' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/congestic.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-congestic.png'
+        puts @link = 'soitic.com'
       when 'ECOS' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/ecos.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-ecos.png'
+        puts @link = 'ecosoitic.com.br'
       when 'EFI' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/efi.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-efi.png'
+        puts @link = 'efidiomas.com'
       when 'ELFUTEC' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/elfutec.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-elfutec.png'
+        puts @link = 'elfutec.com.br'
       when 'MEDSYSTEM' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/medsystem.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-medsystem.png'
+        puts @link = 'soitic.com'
       when 'PACS' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/soitic.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-soitic.png'
+        puts @link = 'soitic.com'
       when 'USAS' 
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/usa.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-usa.png'
+        puts @link = 'soitic.com'
       else
         puts @empresa = 'http://soitic.com/images/assinaturas/empresas/soitic.png'
         puts @cta = 'http://soitic.com/images/assinaturas/cta/cta-soitic.png'
+        puts @link = 'soitic.com'
       end
       %>
 
@@ -62,7 +71,7 @@
 
           <p style="font-family: Lucida Sans, sans-serif; color: rgb(129,129,129); font-weight: lighter; font-size: 12px; margin: 5px;">Skype: '+@signs.skype+'</p>
 
-          <a href="http://www.soitic.com" target="_blank" style="font-family: Lucida Sans, sans-serif; color: #51A7D9; font-weight: lighter; font-size: 12px; margin: 5px; text-decoration: none">www.soitic.com</a>
+          <a href="http://'+@link+'" target="_blank" style="font-family: Lucida Sans, sans-serif; color: #51A7D9; font-weight: lighter; font-size: 12px; margin: 5px; text-decoration: none">'+@link+'</a>
         </div>
 
       </div>
@@ -77,7 +86,7 @@
 
 
         <div style="max-height: 50px; padding: 1em; display: flex; justify-content: center; align-items: center;">
-          <img style="height: 50px; margin-right: 1em;" src="'+@empresa+'" alt="soitic">
+          <a href="http://soitic.com" target="_blank"><img style="height: 50px; margin-right: 1em;" src="'+@empresa+'" alt="soitic"></a>
         </div>
       </div>
 
