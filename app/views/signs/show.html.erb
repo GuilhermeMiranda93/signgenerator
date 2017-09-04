@@ -111,7 +111,7 @@
 			<button class="btn btn-secondary mb-4" id="copyButton" data-clipboard-target="#codetocopy">Copiar código</button>
 			<a class="btn btn-primary mb-4" href="https://www.kinghost.com.br/wiki/artigo/assinatura-no-roundcube/" target="_blank">Como inserir a assinatura no meu email?</a>
 			<%= link_to 'Voltar', signs_path, :class => 'btn btn-warning mb-4' %>
-			<button class="btn btn-success mb-4" data-toggle="modal" data-target="#exampleModal">Prévia</button>
+			<button class="btn btn-success mb-4" id="preview">Prévia</button>
 
 
 		</div>
@@ -119,7 +119,7 @@
 
 	</div>
 
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -183,11 +183,6 @@
 							<img style="margin-right: 1em;" src="<%=@cta%>" alt="cta">
 						</div>
 
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary">Save changes</button>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
