@@ -15,5 +15,10 @@
 $(document).ready(function(){
 
 	var clipboard = new Clipboard('#copyButton');
+
+	$('#preview').click(function(){
+		$('#modal_preview').css('display','block');
+		$('#modal_preview').css('opacity','1');
+	});
 });
 
